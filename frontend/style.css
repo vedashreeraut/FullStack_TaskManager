@@ -1,0 +1,168 @@
+/* Modern Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  
+  /* Your Custom Mesh Gradient */
+  background-color: #e2e8f0;
+  background-image: 
+    radial-gradient(at 0% 0%, rgb(134, 125, 176) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, rgb(93, 130, 242) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, rgb(207, 67, 116) 0, transparent 50%), 
+    radial-gradient(at 0% 100%, rgb(152, 30, 73) 0, transparent 50%), 
+    radial-gradient(at 100% 100%, rgb(131, 114, 220) 0, transparent 50%);
+  background-attachment: fixed;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 90%;
+  max-width: 450px;
+  padding: 2.5rem;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+
+  /* New logic to keep distance from bottom */
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 160px); /* Adjusts based on your 80px top padding */
+  margin-bottom: 80px; /* Matches the top padding for symmetry */
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, #09508e 0%, #ff0844 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Ensure the header icon doesn't disappear from the text-gradient hack */
+h2 i, h2 svg {
+  -webkit-text-fill-color: initial;
+  stroke: #09508e;
+}
+
+.input-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid #edf2f7;
+  border-radius: 14px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+}
+
+input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+/* Primary Add Button */
+button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #09508e 0%, #01d7e2 100%);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 131, 235, 0.4);
+}
+
+ul {
+  list-style: none;
+  overflow-y: auto; /* Enables scrolling */
+  padding-right: 8px; /* Room for the scrollbar */
+  
+  /* Custom scrollbar styling to keep it "pretty" */
+}
+
+ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+li {
+  background: white;
+  margin-bottom: 12px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #f1f5f9;
+  transition: all 0.2s ease;
+}
+
+li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+li span {
+  color: #4a5568;
+  font-weight: 500;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);
+  padding: 8px 14px;
+  font-size: 0.8rem;
+  border-radius: 10px;
+}
+
+.delete-btn:hover {
+  box-shadow: 0 5px 15px rgba(255, 8, 68, 0.3);
+}
