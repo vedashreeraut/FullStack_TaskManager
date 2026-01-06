@@ -14,3 +14,6 @@ A beginner-friendly full stack web application that allows users to add, view, a
 
 ## Learning Outcome
 This project was built to understand full stack development fundamentals, including client–server communication, REST APIs, and basic CRUD operations.
+
+## UI Preview
+This project includes a clean, responsive user interface designed for clarity and ease of use.
