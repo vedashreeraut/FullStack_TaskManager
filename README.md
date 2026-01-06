@@ -17,3 +17,5 @@ This project was built to understand full stack development fundamentals, includ
 
 ## UI Preview
 This project includes a clean, responsive user interface designed for clarity and ease of use.
+
+<img width="2940" height="1604" alt="image" src="https://github.com/user-attachments/assets/74e000fb-8f47-4dc9-8e79-e761a0b014f5" />
